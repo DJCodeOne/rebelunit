@@ -68,7 +68,48 @@ import Layout from '../layouts/Layout.astro';
       <div class="max-w-4xl mx-auto px-4 text-center text-zinc-500">
         <p>&copy; {new Date().getFullYear()} Rebel Unit. All rights reserved.</p>
         <p class="mt-2 text-sm">Rebel Culture x Drum Unit</p>
+        <button id="crewLoginBtn" class="mt-6 text-xs text-zinc-600 hover:text-zinc-400 transition-colors">
+          Crew Login
+        </button>
       </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50">
+      <div class="bg-zinc-900 border border-zinc-700 rounded-lg p-8 max-w-md mx-4 text-center">
+        <h2 class="text-3xl text-white mb-4 font-display">CREW LOGIN</h2>
+        <div class="py-8">
+          <div class="text-6xl mb-4">🚧</div>
+          <p class="text-zinc-400 text-lg">Under Construction</p>
+          <p class="text-zinc-500 text-sm mt-2">Check back soon</p>
+        </div>
+        <button id="closeModal" class="mt-4 px-6 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded transition-colors">
+          Close
+        </button>
+      </div>
+    </div>
   </main>
+
+  <script>
+    const loginBtn = document.getElementById('crewLoginBtn');
+    const modal = document.getElementById('loginModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    loginBtn?.addEventListener('click', () => {
+      modal?.classList.remove('hidden');
+      modal?.classList.add('flex');
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      modal?.classList.add('hidden');
+      modal?.classList.remove('flex');
+    });
+
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
 </Layout>
