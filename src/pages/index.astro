@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rebel Unit - Open Your Mind">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative">
+      <div class="max-w-4xl mx-auto px-4 py-8">
+        <img
+          src="/banner.webp"
+          alt="Rebel Unit - Rebel Culture & Drum Unit"
+          class="w-full rounded-lg shadow-2xl shadow-black/50"
+        />
+      </div>
+    </section>
+
+    <!-- Event Info -->
+    <section class="max-w-4xl mx-auto px-4 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl md:text-7xl tracking-wider text-white mb-4">REBEL UNIT</h1>
+        <p class="text-xl md:text-2xl text-emerald-500 font-display tracking-widest">OPEN YOUR MIND</p>
+      </div>
+
+      <!-- Two Crews -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-lg p-8 text-center hover:border-emerald-500/50 transition-colors">
+          <h2 class="text-4xl text-white mb-4">REBEL CULTURE</h2>
+          <p class="text-zinc-400">Room 1 - Soundsystem</p>
+        </div>
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-lg p-8 text-center hover:border-emerald-500/50 transition-colors">
+          <h2 class="text-4xl text-white mb-4">DRUM UNIT</h2>
+          <p class="text-zinc-400">Room 2 - Soundsystem</p>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">🔊</div>
+          <h3 class="font-display text-xl text-white">2 SOUNDSYSTEMS</h3>
+        </div>
+        <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">🔥</div>
+          <h3 class="font-display text-xl text-white">FIRE SHOW</h3>
+        </div>
+        <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">🍺</div>
+          <h3 class="font-display text-xl text-white">BAR</h3>
+        </div>
+        <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">📀</div>
+          <h3 class="font-display text-xl text-white">VINYL & MERCH</h3>
+        </div>
+      </div>
+
+      <!-- Coming Soon / CTA -->
+      <div class="text-center">
+        <div class="inline-block bg-emerald-600 hover:bg-emerald-500 transition-colors rounded-full px-12 py-4 cursor-pointer">
+          <span class="font-display text-2xl tracking-wider">COMING SOON</span>
+        </div>
+        <p class="mt-6 text-zinc-500">Annual event - Date TBA</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 mt-16 py-8">
+      <div class="max-w-4xl mx-auto px-4 text-center text-zinc-500">
+        <p>&copy; {new Date().getFullYear()} Rebel Unit. All rights reserved.</p>
+        <p class="mt-2 text-sm">Rebel Culture x Drum Unit</p>
+      </div>
+    </footer>
+  </main>
+</Layout>
